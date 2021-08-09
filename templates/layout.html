@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %}{% endblock %} | {{ name }}</title>
+        <meta name="author" content="Jagier Wilmott" />
+        <meta name="description" content="Portfolio Website" />
+        <style>
+            body {
+                font-family: century-gothic, sans-serif;
+            }
+
+            .bank-list{
+                border: 2px solid green;
+                font-family: cursive;
+                font-size: 2rem;
+                padding: 2rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <a href = "/">
+                    <li>About</li>
+                </a>
+                <a href = "/projects">
+                    <li>Projects</li>
+                </a>
+                <a href = "/contact">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </nav>
+        {% block content %}{% endblock %}
+    </body>
+</html>

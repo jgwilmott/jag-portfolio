@@ -1,12 +1,27 @@
 from flask import Flask, render_template
 
+name = "Jagier Wilmott"
+
+list_of_banks = [
+    "RBC",
+    "BNS",
+    "BMO"
+]
+
 app = Flask(__name__)
 
 @app.route("/")
-def route_hello_world():
-    return render_template("hello.html")
+def about_page():
+    return render_template("about.html", name = name, list_of_banks = list_of_banks)
 
 
-@app.route("/<name>")
-def route_hello_name(name):
-    return f"<p>Hello, {name}!</p>"
+@app.route("/projects")
+def projects_page():
+    return render_template("projects.html", name = name)
+
+
+@app.route("/contact")
+def contact_page():
+    return render_template("contact.html", name = name)
+
+

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+{% if name is none %}
+<h1>Welcome! My name is.... I can't remember lol</h1>
+{% else %}
+<h1>Welcome! My name is {{ name }}</h1>
+{% endif %}
+
+<img src="https://media-exp1.licdn.com/dms/image/C5603AQEtM-iOAKuogA/profile-displayphoto-shrink_200_200/0/1620698027447?e=1634169600&v=beta&t=rPX7iCwpqwn-Mdd2fmktKue2jb5TiF97uGA2cytNg6c"/>
+
+<ul class = "bank-list">
+{% for bank in list_of_banks %}
+    <li>{{ bank }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
+
