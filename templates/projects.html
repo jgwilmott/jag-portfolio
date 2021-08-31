@@ -2,4 +2,10 @@
 {% block title %}Projects{% endblock %}
 {% block content %}
 <h1>My Projects</h1>
+
+<ul class = "projects">
+    {% for project in projects %}
+        <li>{{ project["name"]}}</li>
+    {% endblock %}
+</ul>
 {% endblock %}
